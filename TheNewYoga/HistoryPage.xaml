@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TheNewYoga.HistoryPage"
+             Title="Your History">
+    <ScrollView>
+        <VerticalStackLayout Padding="10" Spacing="10">
+            <Label Text="Your History"
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   Margin="0,10,0,10" />
+
+            <CollectionView ItemsSource="{Binding UserHistory}"
+                            BackgroundColor="White"
+                            Margin="0,10,0,0">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame Padding="16"
+                               Margin="10"
+                               BackgroundColor="#FFFFFF"
+                               CornerRadius="8"
+                               HasShadow="True"
+                               BorderColor="#e0e0e0">
+                            <VerticalStackLayout Spacing="5">
+                                <Label Text="{Binding ClassName}"
+                                       FontSize="18"
+                                       FontAttributes="Bold"
+                                       TextColor="#333" />
+
+                                <Label Text="{Binding Quantity, StringFormat='Quantity: {0}'}"
+                                       FontSize="14"
+                                       TextColor="#666" />
+
+                                <Label Text="{Binding PricePerClass, StringFormat='Price per Class: {0:C}'}"
+                                       FontSize="14"
+                                       TextColor="#666" />
+                                
+                                <Label Text="{Binding CheckoutDate, StringFormat='Checkout Date: {0:dd/MM/yyyy}'}"
+                                       FontSize="14"
+                                       TextColor="#666" />
+                            </VerticalStackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

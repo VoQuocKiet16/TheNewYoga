@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TheNewYoga.CartPage"
+             Title="Your Cart">
+    <Grid RowDefinitions="*, Auto">
+        <!-- Scrollable content for cart items -->
+        <ScrollView Grid.Row="0">
+            <StackLayout Padding="20">
+                <Label Text="Your Cart" FontSize="24" FontAttributes="Bold" HorizontalOptions="Center" />
+
+                <CollectionView ItemsSource="{Binding UserCart}">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Frame Margin="10" Padding="10" BackgroundColor="#e0e0e0">
+                                <StackLayout>
+                                    <Label Text="{Binding ClassName}" FontSize="Medium" FontAttributes="Bold"/>
+                                    <Label Text="{Binding PricePerClass, StringFormat='Price: {0:C}'}"/>
+                                    <Label Text="{Binding Quantity, StringFormat='Quantity: {0}'}"/>
+                                    <Button Text="Remove" 
+                                            BackgroundColor="Red" 
+                                            TextColor="White" 
+                                            Clicked="OnRemoveItemClicked" 
+                                            CommandParameter="{Binding .}" />
+                                </StackLayout>
+                            </Frame>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </StackLayout>
+        </ScrollView>
+
+        <!-- Fixed content for Total and Checkout button -->
+        <StackLayout Grid.Row="1" Padding="20">
+            <Label Text="{Binding TotalPrice, StringFormat='Total: ${0:F2}'}"
+                   FontSize="Large" 
+                   HorizontalOptions="Center" />
+
+            <Button Text="Checkout" 
+                    BackgroundColor="Green" 
+                    TextColor="White"
+                    Clicked="OnCheckout" />
+        </StackLayout>
+    </Grid>
+</ContentPage>

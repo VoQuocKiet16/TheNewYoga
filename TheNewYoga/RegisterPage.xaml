@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TheNewYoga.RegisterPage"
+             Title="Register">
+    <VerticalStackLayout
+        Padding="20"
+        Spacing="15"
+        VerticalOptions="Center">
+
+        <Label 
+            Text="Register"
+            FontSize="24"
+            HorizontalOptions="Center" />
+
+        <Entry 
+            x:Name="eUsername"
+            Placeholder="Username"
+            Keyboard="Default" />
+
+        <Entry 
+            x:Name="eEmail"
+            Placeholder="Email"
+            Keyboard="Email" />
+
+        <Entry 
+            x:Name="ePassword"
+            Placeholder="Password"
+            IsPassword="True" />
+
+        <Entry 
+            x:Name="eConfirmPassword"
+            Placeholder="Confirm Password"
+            IsPassword="True" />
+
+        <Button 
+            x:Name="btnRegister"
+            Text="Register"
+            Clicked="btnRegister_Clicked"
+            BackgroundColor="#2196F3"
+            TextColor="White"
+            CornerRadius="10"
+            HeightRequest="50"
+            FontSize="18" />
+    </VerticalStackLayout>
+</ContentPage>
