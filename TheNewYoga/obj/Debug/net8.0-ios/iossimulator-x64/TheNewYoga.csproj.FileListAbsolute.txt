@@ -264,7 +264,6 @@ C:\Users\My PC\source\repos\TheNewYoga\TheNewYoga\bin\Debug\net8.0-ios\iossimula
 C:\Users\My PC\source\repos\TheNewYoga\TheNewYoga\bin\Debug\net8.0-ios\iossimulator-x64\libxamarin-dotnet-nativeaot.a
 C:\Users\My PC\source\repos\TheNewYoga\TheNewYoga\bin\Debug\net8.0-ios\iossimulator-x64\libxamarin-dotnet.a
 C:\Users\My PC\source\repos\TheNewYoga\TheNewYoga\bin\Debug\net8.0-ios\iossimulator-x64\libxamarin-dotnet.dylib
-C:\Users\My PC\source\repos\TheNewYoga\TheNewYoga\obj\Debug\net8.0-ios\iossimulator-x64\build-signature\signature
 C:\Users\My PC\source\repos\TheNewYoga\TheNewYoga\obj\Debug\net8.0-ios\iossimulator-x64\mauiimage.inputs
 C:\Users\My PC\source\repos\TheNewYoga\TheNewYoga\obj\Debug\net8.0-ios\iossimulator-x64\mauifont.inputs
 C:\Users\My PC\source\repos\TheNewYoga\TheNewYoga\obj\Debug\net8.0-ios\iossimulator-x64\mauisplash.inputs
@@ -320,3 +319,14 @@ C:\Users\My PC\source\repos\TheNewYoga\TheNewYoga\obj\Debug\net8.0-ios\iossimula
 C:\Users\My PC\source\repos\TheNewYoga\TheNewYoga\obj\Debug\net8.0-ios\iossimulator-x64\TheNewYoga.pdb
 C:\Users\My PC\source\repos\TheNewYoga\TheNewYoga\obj\Debug\net8.0-ios\iossimulator-x64\TheNewYoga.genruntimeconfig.cache
 C:\Users\My PC\source\repos\TheNewYoga\TheNewYoga\obj\Debug\net8.0-ios\iossimulator-x64\ref\TheNewYoga.dll
+C:\Users\My PC\source\repos\TheNewYoga\TheNewYoga\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\Resources\logout.png
+C:\Users\My PC\source\repos\TheNewYoga\TheNewYoga\obj\Debug\net8.0-ios\iossimulator-x64\TheNewYoga.sourcelink.json
+C:\Users\My PC\source\repos\TheNewYoga\TheNewYoga\obj\Debug\net8.0-ios\iossimulator-x64\build-signature\signature
+C:\Users\My PC\source\repos\TheNewYoga\TheNewYoga\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\Resources\yoga_logo.png
+C:\Users\My PC\source\repos\TheNewYoga\TheNewYoga\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\Resources\add.png
+C:\Users\My PC\source\repos\TheNewYoga\TheNewYoga\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\Resources\background.png
+C:\Users\My PC\source\repos\TheNewYoga\TheNewYoga\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\Resources\email.png
+C:\Users\My PC\source\repos\TheNewYoga\TheNewYoga\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\Resources\lock.png
+C:\Users\My PC\source\repos\TheNewYoga\TheNewYoga\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\Resources\user.png
+C:\Users\My PC\source\repos\TheNewYoga\TheNewYoga\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\f\notoserifkr_variablefont_wght.ttf
+C:\Users\My PC\source\repos\TheNewYoga\TheNewYoga\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\f\pacifico_regular.ttf

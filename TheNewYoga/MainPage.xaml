@@ -2,69 +2,117 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TheNewYoga.MainPage"
-             Title="Welcome">
-    <ScrollView>
-        <VerticalStackLayout Padding="20" Spacing="15">
-            <Label x:Name="WelcomeLabel"
-                   FontSize="28"
-                   FontAttributes="Bold"
-                   HorizontalOptions="Center"
-                   TextColor="#333" />
+             BackgroundColor="#415F91">
 
+    <ContentPage.Background>
+        <LinearGradientBrush EndPoint="1,1">
+            <GradientStop Color="#AEC9FA" Offset="0.0" />
+            <GradientStop Color="#D6E3FF" Offset="1.0" />
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
+    <ContentPage.Content>
+        <AbsoluteLayout>
+
+            <!-- Background image -->
+            <Image Source="background.jpg"
+                   Aspect="AspectFill"
+                   AbsoluteLayout.LayoutBounds="0, 0, 1, 0.4"
+                   AbsoluteLayout.LayoutFlags="All" />
+
+            <!-- Label Welcome overlaying the image -->
+            <Label x:Name="WelcomeLabel"
+                   Text="Welcome to The New Yoga"
+                   FontSize="32"
+                   FontAttributes="Bold"
+                   TextColor="Black"
+                   FontFamily="PacificoRegular"
+                   AbsoluteLayout.LayoutBounds="0.5, 0.075, -1, -1"
+                   AbsoluteLayout.LayoutFlags="PositionProportional" />
+
+            <!-- Search Bar -->
             <SearchBar Placeholder="Search courses..."
                        TextChanged="OnSearchBarTextChanged"
                        BackgroundColor="#F0F0F0"
                        PlaceholderColor="#999"
                        TextColor="#333"
                        FontSize="18"
-                       Margin="0,10,0,10"
-                       HeightRequest="50" />
+                       Margin="20,20,20,0"
+                       HeightRequest="50"
+                       AbsoluteLayout.LayoutBounds="0.5, 0.4, 0.9, -1"
+                       AbsoluteLayout.LayoutFlags="PositionProportional, WidthProportional" />
 
+            <Label x:Name="Available"
+             Text="New Courses"
+             FontSize="24"
+             FontAttributes="Bold"
+             TextColor="Black"
+             FontFamily="Wght"
+             AbsoluteLayout.LayoutBounds="0.1, 0.50, -1, -1"
+             AbsoluteLayout.LayoutFlags="PositionProportional" />
+
+            <!-- CollectionView for displaying courses -->
             <CollectionView ItemsSource="{Binding YogaCourses}"
-                            Margin="0,10,0,0">
+                            Margin="20,10,20,0"
+                            AbsoluteLayout.LayoutBounds="0.5, 0.85, 1, 0.4"
+                            AbsoluteLayout.LayoutFlags="All">
                 <CollectionView.ItemsLayout>
                     <GridItemsLayout Orientation="Vertical"
-                                     Span="2" 
-                                     VerticalItemSpacing="10"
-                                     HorizontalItemSpacing="10" />
+                                     Span="2"
+                                     VerticalItemSpacing="15"
+                                     HorizontalItemSpacing="15" />
                 </CollectionView.ItemsLayout>
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <Frame Padding="15"
-                               Margin="5"
+                               Margin="0,10"
                                BackgroundColor="#FFFFFF"
-                               CornerRadius="10"
+                               CornerRadius="15"
                                HasShadow="True"
                                BorderColor="#DDD">
                             <Frame.GestureRecognizers>
                                 <TapGestureRecognizer Tapped="OnFrameTapped" />
                             </Frame.GestureRecognizers>
-                            <StackLayout>
-                                <Label Text="{Binding NameCourse}"
-                                       FontSize="20"
-                                       FontAttributes="Bold"
-                                       TextColor="#333" />
+                            <StackLayout Spacing="10">
 
+                                <!-- Course Name at the top, centered -->
+                                <Label Text="{Binding NameCourse}"
+                                       FontSize="22"
+                                       FontAttributes="Bold"
+                                       TextColor="#333"
+                                       HorizontalOptions="Center" />
+
+                                <!-- Day of the week -->
                                 <Label Text="{Binding DayOfWeek, StringFormat='Day: {0}'}"
                                        FontSize="16"
-                                       TextColor="#555" />
+                                       TextColor="#555"
+                                       HorizontalOptions="Start" />
 
+                                <!-- Time -->
                                 <Label Text="{Binding Time, StringFormat='Time: {0}'}"
                                        FontSize="16"
-                                       TextColor="#555" />
+                                       TextColor="#555"
+                                       HorizontalOptions="Start" />
 
+                                <!-- Class Type -->
                                 <Label Text="{Binding ClassType, StringFormat='Type: {0}'}"
                                        FontSize="16"
-                                       TextColor="#555" />
+                                       TextColor="#555"
+                                       HorizontalOptions="Start" />
 
+                                <!-- Price -->
                                 <Label Text="{Binding PricePerClass, StringFormat='Price: {0:C}'}"
                                        FontSize="16"
-                                       TextColor="#4CAF50" />
+                                       TextColor="Blue"
+                                       HorizontalOptions="Start" />
+
                             </StackLayout>
                         </Frame>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
-        </VerticalStackLayout>
-    </ScrollView>
+
+        </AbsoluteLayout>
+    </ContentPage.Content>
+
 </ContentPage>

@@ -307,3 +307,13 @@ C:\Users\My PC\source\repos\TheNewYoga\TheNewYoga\obj\Debug\net8.0-maccatalyst\m
 C:\Users\My PC\source\repos\TheNewYoga\TheNewYoga\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\TheNewYoga.pdb
 C:\Users\My PC\source\repos\TheNewYoga\TheNewYoga\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\TheNewYoga.genruntimeconfig.cache
 C:\Users\My PC\source\repos\TheNewYoga\TheNewYoga\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\ref\TheNewYoga.dll
+C:\Users\My PC\source\repos\TheNewYoga\TheNewYoga\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\logout.png
+C:\Users\My PC\source\repos\TheNewYoga\TheNewYoga\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\TheNewYoga.sourcelink.json
+C:\Users\My PC\source\repos\TheNewYoga\TheNewYoga\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\background.png
+C:\Users\My PC\source\repos\TheNewYoga\TheNewYoga\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\user.png
+C:\Users\My PC\source\repos\TheNewYoga\TheNewYoga\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\yoga_logo.png
+C:\Users\My PC\source\repos\TheNewYoga\TheNewYoga\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\add.png
+C:\Users\My PC\source\repos\TheNewYoga\TheNewYoga\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\email.png
+C:\Users\My PC\source\repos\TheNewYoga\TheNewYoga\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\lock.png
+C:\Users\My PC\source\repos\TheNewYoga\TheNewYoga\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\f\notoserifkr_variablefont_wght.ttf
+C:\Users\My PC\source\repos\TheNewYoga\TheNewYoga\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\f\pacifico_regular.ttf

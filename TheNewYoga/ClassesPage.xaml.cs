@@ -151,8 +151,8 @@ namespace TheNewYoga
 
         private async void OnAddToCartClicked(object sender, EventArgs e)
         {
-            var button = (Button)sender;
-            var selectedClass = (YogaClass)button.BindingContext;
+            var imageButton = (ImageButton)sender;
+            var selectedClass = (YogaClass)imageButton.BindingContext;
 
             // Use the stored course price and name from this context
             double pricePerClass = CoursePrice;

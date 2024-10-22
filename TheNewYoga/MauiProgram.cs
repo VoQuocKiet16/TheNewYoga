@@ -13,6 +13,8 @@ namespace TheNewYoga
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
+                    fonts.AddFont("pacifico_regular.ttf", "PacificoRegular");
+                    fonts.AddFont("notoserifkr_variablefont_wght.ttf", "Wght");
                 });
 
 #if DEBUG

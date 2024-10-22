@@ -10,10 +10,10 @@ namespace TheNewYoga
     public partial class MainPage : ContentPage
     {
         private readonly FirebaseClient firebaseClient = new FirebaseClient("https://thenewyoga-604c0-default-rtdb.asia-southeast1.firebasedatabase.app/");
-        private ObservableCollection<YogaCourse> _allYogaCourses; // Store all fetched courses
-        public ObservableCollection<YogaCourse> YogaCourses { get; set; } // Filtered courses for UI display
+        private ObservableCollection<YogaCourse> _allYogaCourses; // Lưu tất cả khóa học
+        public ObservableCollection<YogaCourse> YogaCourses { get; set; } // Khóa học được hiển thị trên UI
 
-        // Parameterless constructor for navigation without parameters.
+        // Constructor mặc định
         public MainPage()
         {
             InitializeComponent();
@@ -21,19 +21,11 @@ namespace TheNewYoga
             _allYogaCourses = new ObservableCollection<YogaCourse>();
             BindingContext = this;
 
-            // Default welcome message if no username is provided
-            Title = "Welcome";
-            WelcomeLabel.Text = "Welcome!";
+            // Hiển thị thông báo chào mừng mặc định nếu không có username
+            WelcomeLabel.Text = "Welcome to The New Yoga";
 
-            // Load courses without needing a username for this case
-            _ = LoadYogaCourses(); // Use '_' to ignore the Task result for fire-and-forget.
-        }
-
-        // Constructor with parameters for proper page navigation
-        public MainPage(string username) : this()
-        {
-            Title = $"Welcome, {username}";
-            WelcomeLabel.Text = $"Welcome, {username}!";
+            // Tải khóa học
+            _ = LoadYogaCourses();
         }
 
         private async Task LoadYogaCourses()
@@ -67,11 +59,12 @@ namespace TheNewYoga
             }
         }
 
+        // Lọc khóa học theo từ khóa tìm kiếm
         private void FilterCourses(string searchText)
         {
             if (string.IsNullOrWhiteSpace(searchText))
             {
-                // Show all courses if search text is empty
+                // Nếu không có từ khóa, hiển thị tất cả khóa học
                 YogaCourses.Clear();
                 foreach (var course in _allYogaCourses)
                 {
@@ -97,12 +90,13 @@ namespace TheNewYoga
             }
         }
 
+        // Xử lý sự kiện thay đổi nội dung SearchBar
         private void OnSearchBarTextChanged(object sender, TextChangedEventArgs e)
         {
-            // Filter courses based on the search text
             FilterCourses(e.NewTextValue);
         }
 
+        // Khi người dùng chọn khóa học
         private async void OnFrameTapped(object sender, EventArgs e)
         {
             var frame = (Frame)sender;
@@ -110,11 +104,13 @@ namespace TheNewYoga
             await Navigation.PushAsync(new ClassesPage(selectedCourse.Id, selectedCourse.NameCourse, selectedCourse.PricePerClass));
         }
 
+        // Chuyển đến trang giỏ hàng
         private async void OnViewCartClicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new CartPage());
         }
 
+        // Chuyển đến trang lịch sử
         private async void OnViewHistoryClicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new HistoryPage());

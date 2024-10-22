@@ -1,8 +1,22 @@
-<?xml version="1.0" encoding="utf-8" ?>
 <Shell xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
        xmlns:local="clr-namespace:TheNewYoga"
-       x:Class="TheNewYoga.AppShell">
+       x:Class="TheNewYoga.AppShell"
+       BackgroundColor="#415F91"
+       FlyoutBackgroundColor="#AEC9FA">
+
+    <!-- FlyoutHeaderTemplate để tùy chỉnh header -->
+    <Shell.FlyoutHeaderTemplate>
+        <DataTemplate>
+            <StackLayout Padding="10" BackgroundColor="#AEC9FA">
+                <Label Text="{Binding WelcomeMessage}" 
+                       FontSize="Medium" 
+                       HorizontalOptions="Center" 
+                       VerticalOptions="Center" 
+                       TextColor="Black" />
+            </StackLayout>
+        </DataTemplate>
+    </Shell.FlyoutHeaderTemplate>
 
     <Shell.Resources>
         <ResourceDictionary>

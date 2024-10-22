@@ -114,5 +114,10 @@ namespace TheNewYoga
                 return builder.ToString();
             }
         }
+
+        private async void btnLogin_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new LoginPage());
+        }
     }
 }

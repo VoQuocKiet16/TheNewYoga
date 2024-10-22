@@ -4,3 +4,9 @@
 
 /TheNewYoga.sln
 /TheNewYoga.sln
+
+# Ignore Visual Studio temporary files, build results, and
+# folder containing Visual Studio settings
+.vs/
+*.user
+*.suo

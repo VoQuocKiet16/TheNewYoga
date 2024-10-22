@@ -3,43 +3,93 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TheNewYoga.CartPage"
              Title="Your Cart">
-    <Grid RowDefinitions="*, Auto">
+    <ContentPage.Background>
+        <LinearGradientBrush EndPoint="1,1">
+            <GradientStop Color="#AEC9FA" Offset="0.0" />
+            <GradientStop Color="#D6E3FF" Offset="1.0" />
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
+    <Grid RowDefinitions="*, Auto" Padding="20">
         <!-- Scrollable content for cart items -->
         <ScrollView Grid.Row="0">
-            <StackLayout Padding="20">
-                <Label Text="Your Cart" FontSize="24" FontAttributes="Bold" HorizontalOptions="Center" />
+            <VerticalStackLayout Spacing="15">
 
+                <!-- Cart Title -->
+                <Label Text="Your Cart" 
+                       FontSize="30" 
+                       FontAttributes="Bold" 
+                       FontFamily="PacificoRegular"
+                       HorizontalOptions="Center"
+                       TextColor="#333"
+                       Margin="0,10,0,20" />
+
+                <!-- CollectionView for cart items -->
                 <CollectionView ItemsSource="{Binding UserCart}">
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
-                            <Frame Margin="10" Padding="10" BackgroundColor="#e0e0e0">
-                                <StackLayout>
-                                    <Label Text="{Binding ClassName}" FontSize="Medium" FontAttributes="Bold"/>
-                                    <Label Text="{Binding PricePerClass, StringFormat='Price: {0:C}'}"/>
-                                    <Label Text="{Binding Quantity, StringFormat='Quantity: {0}'}"/>
+                            <Frame Margin="0,10" Padding="15" 
+                                   BackgroundColor="#FFFFFF" 
+                                   CornerRadius="15"
+                                   HasShadow="True"
+                                   BorderColor="#DDD">
+                                <VerticalStackLayout Spacing="10">
+
+                                    <!-- Class Name -->
+                                    <Label Text="{Binding ClassName}" 
+                                           FontSize="22" 
+                                           FontAttributes="Bold"
+                                           TextColor="#333" />
+
+                                    <!-- Price -->
+                                    <Label Text="{Binding PricePerClass, StringFormat='Price: {0:C}'}"
+                                           FontSize="18"
+                                           TextColor="#757575" />
+
+                                    <!-- Quantity -->
+                                    <Label Text="{Binding Quantity, StringFormat='Quantity: {0}'}"
+                                           FontSize="18"
+                                           TextColor="#757575" />
+
+                                    <!-- Remove Button -->
                                     <Button Text="Remove" 
-                                            BackgroundColor="Red" 
+                                            BackgroundColor="#FF5252" 
                                             TextColor="White" 
+                                            CornerRadius="10"
                                             Clicked="OnRemoveItemClicked" 
-                                            CommandParameter="{Binding .}" />
-                                </StackLayout>
+                                            CommandParameter="{Binding .}"
+                                            HeightRequest="45"
+                                            WidthRequest="120"
+                                            HorizontalOptions="End" />
+                                </VerticalStackLayout>
                             </Frame>
                         </DataTemplate>
                     </CollectionView.ItemTemplate>
                 </CollectionView>
-            </StackLayout>
+            </VerticalStackLayout>
         </ScrollView>
 
         <!-- Fixed content for Total and Checkout button -->
-        <StackLayout Grid.Row="1" Padding="20">
+        <Grid Grid.Row="1" Padding="0" RowDefinitions="Auto, Auto" ColumnDefinitions="*, *" VerticalOptions="End">
+
+            <!-- Total Price -->
             <Label Text="{Binding TotalPrice, StringFormat='Total: ${0:F2}'}"
                    FontSize="Large" 
-                   HorizontalOptions="Center" />
+                   FontAttributes="Bold"
+                   HorizontalOptions="Start"
+                   VerticalOptions="Center"
+                   TextColor="#333" />
 
+            <!-- Checkout Button -->
             <Button Text="Checkout" 
-                    BackgroundColor="Green" 
+                    Grid.Column="1"
+                    BackgroundColor="#4CAF50" 
                     TextColor="White"
+                    CornerRadius="10"
+                    HeightRequest="50"
+                    WidthRequest="150"
+                    HorizontalOptions="End"
                     Clicked="OnCheckout" />
-        </StackLayout>
+        </Grid>
     </Grid>
 </ContentPage>

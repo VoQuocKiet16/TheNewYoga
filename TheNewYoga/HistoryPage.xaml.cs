@@ -18,6 +18,12 @@ namespace TheNewYoga
             _ = LoadUserHistory();
         }
 
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            _ = LoadUserHistory(); // Reload cart items whenever the page appears.
+        }
+
         private async Task LoadUserHistory()
         {
             Console.WriteLine("Loading user history...");

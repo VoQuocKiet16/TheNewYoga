@@ -55,20 +55,35 @@
     <AppxPackagedFile Include="C:\Users\My PC\source\repos\TheNewYoga\TheNewYoga\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-400.png">
       <PackagePath>splashSplashScreen.scale-400.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\My PC\source\repos\TheNewYoga\TheNewYoga\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\f\notoserifkr_variablefont_wght.ttf">
+      <PackagePath>notoserifkr_variablefont_wght.ttf</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\My PC\source\repos\TheNewYoga\TheNewYoga\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Regular.ttf">
       <PackagePath>OpenSans-Regular.ttf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\My PC\source\repos\TheNewYoga\TheNewYoga\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Semibold.ttf">
       <PackagePath>OpenSans-Semibold.ttf</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\My PC\source\repos\TheNewYoga\TheNewYoga\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\f\pacifico_regular.ttf">
+      <PackagePath>pacifico_regular.ttf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\My PC\source\repos\TheNewYoga\TheNewYoga\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\logout.scale-100.png">
+      <PackagePath>logout.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\My PC\source\repos\TheNewYoga\TheNewYoga\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\background.scale-100.png">
+      <PackagePath>background.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\My PC\source\repos\TheNewYoga\TheNewYoga\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\user.scale-100.png">
+      <PackagePath>user.scale-100.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\My PC\source\repos\TheNewYoga\TheNewYoga\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\cart.scale-100.png">
       <PackagePath>cart.scale-100.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\My PC\source\repos\TheNewYoga\TheNewYoga\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\home.scale-100.png">
-      <PackagePath>home.scale-100.png</PackagePath>
+    <AppxPackagedFile Include="C:\Users\My PC\source\repos\TheNewYoga\TheNewYoga\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\yoga_logo.scale-100.png">
+      <PackagePath>yoga_logo.scale-100.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\My PC\source\repos\TheNewYoga\TheNewYoga\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\history.scale-100.png">
-      <PackagePath>history.scale-100.png</PackagePath>
+    <AppxPackagedFile Include="C:\Users\My PC\source\repos\TheNewYoga\TheNewYoga\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\lock.scale-100.png">
+      <PackagePath>lock.scale-100.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\My PC\source\repos\TheNewYoga\TheNewYoga\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-400.png">
       <PackagePath>appiconLargeTile.scale-400.png</PackagePath>
@@ -207,6 +222,18 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\My PC\source\repos\TheNewYoga\TheNewYoga\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appicon.ico">
       <PackagePath>appicon.ico</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\My PC\source\repos\TheNewYoga\TheNewYoga\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\add.scale-100.png">
+      <PackagePath>add.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\My PC\source\repos\TheNewYoga\TheNewYoga\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\home.scale-100.png">
+      <PackagePath>home.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\My PC\source\repos\TheNewYoga\TheNewYoga\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\email.scale-100.png">
+      <PackagePath>email.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\My PC\source\repos\TheNewYoga\TheNewYoga\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\history.scale-100.png">
+      <PackagePath>history.scale-100.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\My PC\source\repos\TheNewYoga\TheNewYoga\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png">
       <PackagePath>dotnet_bot.scale-400.png</PackagePath>

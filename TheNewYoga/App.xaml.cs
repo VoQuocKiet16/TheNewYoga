@@ -12,7 +12,7 @@ namespace TheNewYoga
 
             if (IsUserLoggedIn())
             {
-                MainPage = new AppShell();
+                MainPage = new NavigationPage(new LoginPage());
             }
             else
             {

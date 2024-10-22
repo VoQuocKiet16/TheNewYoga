@@ -2,48 +2,84 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TheNewYoga.HistoryPage"
-             Title="Your History">
-    <ScrollView>
-        <VerticalStackLayout Padding="10" Spacing="10">
-            <Label Text="Your History"
-                   FontSize="24"
-                   FontAttributes="Bold"
-                   HorizontalOptions="Center"
-                   Margin="0,10,0,10" />
+             Title="Your History"
+             BackgroundColor="#FAFAFA">
 
+    <ContentPage.Background>
+        <LinearGradientBrush EndPoint="1,1">
+            <GradientStop Color="#AEC9FA" Offset="0.0" />
+            <GradientStop Color="#D6E3FF" Offset="1.0" />
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="20">
+
+            <!-- Title -->
+            <Label Text="Your History Booking"
+                   FontSize="28"
+                   FontAttributes="Bold"
+                    FontFamily="PacificoRegular"
+                   HorizontalOptions="Center"
+                   TextColor="#333"
+                   Margin="0,20,0,10" />
+
+            <!-- CollectionView for displaying history -->
             <CollectionView ItemsSource="{Binding UserHistory}"
-                            BackgroundColor="White"
+                            BackgroundColor="Transparent"
                             Margin="0,10,0,0">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <Frame Padding="16"
-                               Margin="10"
-                               BackgroundColor="#FFFFFF"
-                               CornerRadius="8"
+                        <Frame Padding="20"
+                               Margin="0,10"
+                               BackgroundColor="White"
+                               CornerRadius="15"
                                HasShadow="True"
-                               BorderColor="#e0e0e0">
-                            <VerticalStackLayout Spacing="5">
+                               BorderColor="#DDD">
+                            <VerticalStackLayout Spacing="10">
+
+                                <!-- Class Name -->
                                 <Label Text="{Binding ClassName}"
-                                       FontSize="18"
+                                       FontSize="20"
                                        FontAttributes="Bold"
-                                       TextColor="#333" />
+                                       TextColor="#1B5E20" />
 
-                                <Label Text="{Binding Quantity, StringFormat='Quantity: {0}'}"
-                                       FontSize="14"
-                                       TextColor="#666" />
+                                <!-- Quantity -->
+                                <HorizontalStackLayout Spacing="5">
+                                    <Label Text="Quantity: "
+                                           FontSize="16"
+                                           TextColor="#555" />
+                                    <Label Text="{Binding Quantity}"
+                                           FontSize="16"
+                                           TextColor="#333" />
+                                </HorizontalStackLayout>
 
-                                <Label Text="{Binding PricePerClass, StringFormat='Price per Class: {0:C}'}"
-                                       FontSize="14"
-                                       TextColor="#666" />
-                                
-                                <Label Text="{Binding CheckoutDate, StringFormat='Checkout Date: {0:dd/MM/yyyy}'}"
-                                       FontSize="14"
-                                       TextColor="#666" />
+                                <!-- Price per Class -->
+                                <HorizontalStackLayout Spacing="5">
+                                    <Label Text="Price per Class: "
+                                           FontSize="16"
+                                           TextColor="#555" />
+                                    <Label Text="{Binding PricePerClass, StringFormat='{0:C}'}"
+                                           FontSize="16"
+                                           TextColor="#333" />
+                                </HorizontalStackLayout>
+
+                                <!-- Checkout Date -->
+                                <HorizontalStackLayout Spacing="5">
+                                    <Label Text="Checkout Date: "
+                                           FontSize="16"
+                                           TextColor="#555" />
+                                    <Label Text="{Binding CheckoutDate, StringFormat='{0:dd/MM/yyyy}'}"
+                                           FontSize="16"
+                                           TextColor="#333" />
+                                </HorizontalStackLayout>
+
                             </VerticalStackLayout>
                         </Frame>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
+
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

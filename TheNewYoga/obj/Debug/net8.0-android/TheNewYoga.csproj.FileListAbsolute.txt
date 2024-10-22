@@ -1045,3 +1045,12 @@ C:\Users\My PC\source\repos\TheNewYoga\TheNewYoga\obj\Debug\net8.0-android\stamp
 C:\Users\My PC\source\repos\TheNewYoga\TheNewYoga\obj\Debug\net8.0-android\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\My PC\source\repos\TheNewYoga\TheNewYoga\obj\Debug\net8.0-android\stamp\_ResolveLibraryProjectImports.stamp
 C:\Users\My PC\source\repos\TheNewYoga\TheNewYoga\obj\Debug\net8.0-android\resizetizer\r\drawable\logout.png
+C:\Users\My PC\source\repos\TheNewYoga\TheNewYoga\obj\Debug\net8.0-android\TheNewYoga.sourcelink.json
+C:\Users\My PC\source\repos\TheNewYoga\TheNewYoga\obj\Debug\net8.0-android\resizetizer\r\drawable\yoga_logo.png
+C:\Users\My PC\source\repos\TheNewYoga\TheNewYoga\obj\Debug\net8.0-android\resizetizer\r\drawable\email.png
+C:\Users\My PC\source\repos\TheNewYoga\TheNewYoga\obj\Debug\net8.0-android\resizetizer\f\notoserifkr_variablefont_wght.ttf
+C:\Users\My PC\source\repos\TheNewYoga\TheNewYoga\obj\Debug\net8.0-android\resizetizer\f\pacifico_regular.ttf
+C:\Users\My PC\source\repos\TheNewYoga\TheNewYoga\obj\Debug\net8.0-android\resizetizer\r\drawable\lock.png
+C:\Users\My PC\source\repos\TheNewYoga\TheNewYoga\obj\Debug\net8.0-android\resizetizer\r\drawable\user.png
+C:\Users\My PC\source\repos\TheNewYoga\TheNewYoga\obj\Debug\net8.0-android\resizetizer\r\drawable\background.png
+C:\Users\My PC\source\repos\TheNewYoga\TheNewYoga\obj\Debug\net8.0-android\resizetizer\r\drawable\add.png

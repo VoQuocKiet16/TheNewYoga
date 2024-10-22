@@ -1,4 +1,4 @@
-using Firebase.Database;
+﻿using Firebase.Database;
 using Firebase.Database.Query;
 using System.Collections.ObjectModel;
 using System.Linq;

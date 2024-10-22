@@ -4,8 +4,10 @@
 <dict>
   <key>UIAppFonts</key>
   <array>
+	<string>notoserifkr_variablefont_wght.ttf</string>
 	<string>OpenSans-Regular.ttf</string>
 	<string>OpenSans-Semibold.ttf</string>
+	<string>pacifico_regular.ttf</string>
   </array>
 
 </dict>
