@@ -76,12 +76,13 @@ namespace TheNewYoga
                     var historyItem = new HistoryItem
                     {
                         ClassId = cartItem.ClassId,
-                        UserId = cartItem.UserId,
+                        userId = cartItem.UserId,
                         PricePerClass = cartItem.PricePerClass,
                         TotalPrice = cartItem.TotalPrice,
                         ClassName = cartItem.ClassName,
                         Quantity = cartItem.Quantity,
-                        CheckoutDate = DateTime.UtcNow
+                        CheckoutDate = DateTime.UtcNow,
+                        email = App.CurrentUser.email
                     };
 
                     await firebaseClient
