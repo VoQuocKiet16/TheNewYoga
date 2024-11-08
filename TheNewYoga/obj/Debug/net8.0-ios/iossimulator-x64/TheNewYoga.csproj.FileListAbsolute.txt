@@ -321,7 +321,6 @@ C:\Users\My PC\source\repos\TheNewYoga\TheNewYoga\obj\Debug\net8.0-ios\iossimula
 C:\Users\My PC\source\repos\TheNewYoga\TheNewYoga\obj\Debug\net8.0-ios\iossimulator-x64\ref\TheNewYoga.dll
 C:\Users\My PC\source\repos\TheNewYoga\TheNewYoga\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\Resources\logout.png
 C:\Users\My PC\source\repos\TheNewYoga\TheNewYoga\obj\Debug\net8.0-ios\iossimulator-x64\TheNewYoga.sourcelink.json
-C:\Users\My PC\source\repos\TheNewYoga\TheNewYoga\obj\Debug\net8.0-ios\iossimulator-x64\build-signature\signature
 C:\Users\My PC\source\repos\TheNewYoga\TheNewYoga\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\Resources\yoga_logo.png
 C:\Users\My PC\source\repos\TheNewYoga\TheNewYoga\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\Resources\add.png
 C:\Users\My PC\source\repos\TheNewYoga\TheNewYoga\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\Resources\background.png

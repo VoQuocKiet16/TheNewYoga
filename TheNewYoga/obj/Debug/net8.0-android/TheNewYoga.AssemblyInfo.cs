@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TheNewYoga")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+e95f766375a94db679247f1bbe76d462027c4b63")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+f75334bd00a23133d155fa833c783a206477af21")]
 [assembly: System.Reflection.AssemblyProductAttribute("TheNewYoga")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TheNewYoga")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

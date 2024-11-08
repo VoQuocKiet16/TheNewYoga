@@ -15,49 +15,62 @@ namespace TheNewYoga
             InitializeComponent();
         }
 
- 
+
         private async void btnLogin_Clicked(object sender, EventArgs e)
         {
             string email = eEmail.Text?.Trim();
             string password = ePassword.Text?.Trim();
 
-         
+            // Check if email or password is empty
+            if (string.IsNullOrEmpty(email))
+            {
+                await DisplayAlert("Error", "Email cannot be empty.", "OK");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(password))
+            {
+                await DisplayAlert("Error", "Password cannot be empty.", "OK");
+                return;
+            }
+
+            // Validate email format
             if (!IsValidEmail(email))
             {
                 await DisplayAlert("Error", "Invalid email format.", "OK");
                 return;
             }
 
-            // Mã hóa mật khẩu nhập vào
+            // Hash the entered password
             string hashedPassword = HashPassword(password);
 
             try
             {
-                // Lấy tất cả người dùng từ bảng "yoga_users" trong Firebase
+                // Fetch all users from the "yoga_users" table in Firebase
                 var users = await firebaseClient
-                    .Child("yoga_users")  // Fetch từ bảng "yoga_users"
+                    .Child("yoga_users")  // Fetch from the "yoga_users" table
                     .OnceAsync<YogaUser>();
 
-                // Kiểm tra nếu có người dùng nào khớp với email và mật khẩu đã mã hóa
+                // Check if there is a user matching the email and hashed password
                 var matchedUser = users.FirstOrDefault(u =>
                     u.Object.email.Equals(email, StringComparison.OrdinalIgnoreCase) &&
                     u.Object.password == hashedPassword);
 
                 if (matchedUser != null)
                 {
-                    // Lấy thông tin người dùng từ kết quả
+                    // Get user information from the result
                     var user = matchedUser.Object;
                     user.firebaseKey = matchedUser.Key;
 
-                    // Lưu thông tin người dùng hiện tại trong ứng dụng
+                    // Save current user information in the application
                     App.CurrentUser = user;
 
-                    // Lưu thông tin đăng nhập vào Preferences để sử dụng cho lần sau
+                    // Save login information in Preferences for later use
                     Preferences.Set("UserEmail", user.email);
 
                     await DisplayAlert("Success", "Login successful!", "OK");
 
-                    // Điều hướng đến AppShell (Bottom Navigation Bar)
+                    // Navigate to AppShell (Bottom Navigation Bar)
                     Application.Current.MainPage = new AppShell();
                 }
                 else
@@ -72,15 +85,12 @@ namespace TheNewYoga
             }
         }
 
-        // Phương thức kiểm tra định dạng email
         private bool IsValidEmail(string email)
         {
-            // Biểu thức regex đơn giản để kiểm tra định dạng email
             string pattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
             return Regex.IsMatch(email, pattern);
         }
 
-        // Phương thức mã hóa mật khẩu bằng SHA256
         private string HashPassword(string password)
         {
             using (var sha256 = SHA256.Create())
@@ -95,7 +105,6 @@ namespace TheNewYoga
             }
         }
 
-        // Xử lý sự kiện khi nhấn nút Đăng ký
         private async void btnRegister_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new RegisterPage());

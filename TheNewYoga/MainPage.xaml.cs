@@ -10,10 +10,9 @@ namespace TheNewYoga
     public partial class MainPage : ContentPage
     {
         private readonly FirebaseClient firebaseClient = new FirebaseClient("https://thenewyoga-604c0-default-rtdb.asia-southeast1.firebasedatabase.app/");
-        private ObservableCollection<YogaCourse> _allYogaCourses; // Lưu tất cả khóa học
-        public ObservableCollection<YogaCourse> YogaCourses { get; set; } // Khóa học được hiển thị trên UI
+        private ObservableCollection<YogaCourse> _allYogaCourses; 
+        public ObservableCollection<YogaCourse> YogaCourses { get; set; }
 
-        // Constructor mặc định
         public MainPage()
         {
             InitializeComponent();
@@ -21,10 +20,8 @@ namespace TheNewYoga
             _allYogaCourses = new ObservableCollection<YogaCourse>();
             BindingContext = this;
 
-            // Hiển thị thông báo chào mừng mặc định nếu không có username
             WelcomeLabel.Text = "Welcome to The New Yoga";
 
-            // Tải khóa học
             _ = LoadYogaCourses();
         }
 
@@ -58,13 +55,10 @@ namespace TheNewYoga
                 await DisplayAlert("Error", $"Failed to load courses: {ex.Message}", "OK");
             }
         }
-
-        // Lọc khóa học theo từ khóa tìm kiếm
         private void FilterCourses(string searchText)
         {
             if (string.IsNullOrWhiteSpace(searchText))
             {
-                // Nếu không có từ khóa, hiển thị tất cả khóa học
                 YogaCourses.Clear();
                 foreach (var course in _allYogaCourses)
                 {
@@ -90,13 +84,11 @@ namespace TheNewYoga
             }
         }
 
-        // Xử lý sự kiện thay đổi nội dung SearchBar
         private void OnSearchBarTextChanged(object sender, TextChangedEventArgs e)
         {
             FilterCourses(e.NewTextValue);
         }
 
-        // Khi người dùng chọn khóa học
         private async void OnFrameTapped(object sender, EventArgs e)
         {
             var frame = (Frame)sender;
@@ -104,13 +96,11 @@ namespace TheNewYoga
             await Navigation.PushAsync(new ClassesPage(selectedCourse.Id, selectedCourse.NameCourse, selectedCourse.PricePerClass));
         }
 
-        // Chuyển đến trang giỏ hàng
         private async void OnViewCartClicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new CartPage());
         }
 
-        // Chuyển đến trang lịch sử
         private async void OnViewHistoryClicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new HistoryPage());

@@ -13,141 +13,143 @@
         </LinearGradientBrush>
     </ContentPage.Background>
 
-    <VerticalStackLayout
-        Padding="20"
-        Spacing="15"
-        VerticalOptions="Center"
-        HorizontalOptions="Center"
-        WidthRequest="350">
-
-        <Image 
-       Source="yoga_logo.png"
-       HeightRequest="200"
-       WidthRequest="250"
-       HorizontalOptions="Center" />
-
-        <!-- Tiêu đề Register -->
-        <Label 
-            Text="Sing Up"
-            
-            FontSize="30"
-            FontAttributes="Bold"
+    <!-- ScrollView để hỗ trợ cuộn nội dung -->
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="20"
+            Spacing="15"
+            VerticalOptions="Center"
             HorizontalOptions="Center"
-            TextColor="Black"
-            FontFamily="PacificoRegular"/>
+            WidthRequest="350">
 
-        <!-- Nhập Username -->
-        <Frame 
-            Padding="0"
-            BackgroundColor="White"
-            CornerRadius="10"
-            BorderColor="#CCCCCC"
-            HeightRequest="50">
-            <HorizontalStackLayout>
-                <Image Source="user.png" WidthRequest="24" HeightRequest="24" Margin="10,0,0,0"/>
-                <Entry 
-                    x:Name="eUsername"
-                    Placeholder="Username"
-                    BackgroundColor="Transparent"
-                    PlaceholderColor="#AAAAAA"
-                    TextColor="#000000"
-                    HeightRequest="50"
-                    HorizontalOptions="FillAndExpand" />
-            </HorizontalStackLayout>
-        </Frame>
+            <Image 
+               Source="yoga_logo.png"
+               HeightRequest="200"
+               WidthRequest="250"
+               HorizontalOptions="Center" />
 
-        <!-- Nhập Email -->
-        <Frame 
-            Padding="0"
-            BackgroundColor="White"
-            CornerRadius="10"
-            BorderColor="#CCCCCC"
-            HeightRequest="50">
-            <HorizontalStackLayout>
-                <Image Source="email.png" WidthRequest="24" HeightRequest="24" Margin="10,0,0,0"/>
-                <Entry 
-                    x:Name="eEmail"
-                    Placeholder="Email"
-                    Keyboard="Email"
-                    BackgroundColor="Transparent"
-                    PlaceholderColor="#AAAAAA"
-                    TextColor="#000000"
-                    HeightRequest="50"
-                    HorizontalOptions="FillAndExpand" />
-            </HorizontalStackLayout>
-        </Frame>
+            <!-- Tiêu đề Register -->
+            <Label 
+                Text="Sing Up"
+                FontSize="30"
+                FontAttributes="Bold"
+                HorizontalOptions="Center"
+                TextColor="Black"
+                FontFamily="PacificoRegular"/>
 
-        <!-- Nhập Password -->
-        <Frame 
-            Padding="0"
-            BackgroundColor="White"
-            CornerRadius="10"
-            BorderColor="#CCCCCC"
-            HeightRequest="50">
-            <HorizontalStackLayout>
-                <Image Source="lock.png" WidthRequest="24" HeightRequest="24" Margin="10,0,0,0"/>
-                <Entry 
-                    x:Name="ePassword"
-                    Placeholder="Password"
-                    IsPassword="True"
-                    BackgroundColor="Transparent"
-                    PlaceholderColor="#AAAAAA"
-                    TextColor="#000000"
-                    HeightRequest="50"
-                    HorizontalOptions="FillAndExpand" />
-            </HorizontalStackLayout>
-        </Frame>
+            <!-- Nhập Username -->
+            <Frame 
+                Padding="0"
+                BackgroundColor="White"
+                CornerRadius="10"
+                BorderColor="#CCCCCC"
+                HeightRequest="50">
+                <HorizontalStackLayout>
+                    <Image Source="user.png" WidthRequest="24" HeightRequest="24" Margin="10,0,0,0"/>
+                    <Entry 
+                        x:Name="eUsername"
+                        Placeholder="Username"
+                        BackgroundColor="Transparent"
+                        PlaceholderColor="#AAAAAA"
+                        TextColor="#000000"
+                        HeightRequest="50"
+                        HorizontalOptions="FillAndExpand" />
+                </HorizontalStackLayout>
+            </Frame>
 
-        <!-- Nhập Confirm Password -->
-        <Frame 
-            Padding="0"
-            BackgroundColor="White"
-            CornerRadius="10"
-            BorderColor="#CCCCCC"
-            HeightRequest="50">
-            <HorizontalStackLayout>
-                <Image Source="lock.png" WidthRequest="24" HeightRequest="24" Margin="10,0,0,0"/>
-                <Entry 
-                    x:Name="eConfirmPassword"
-                    Placeholder="Confirm Password"
-                    IsPassword="True"
-                    BackgroundColor="Transparent"
-                    PlaceholderColor="#AAAAAA"
-                    TextColor="#000000"
-                    HeightRequest="50"
-                    HorizontalOptions="FillAndExpand" />
-            </HorizontalStackLayout>
-        </Frame>
+            <!-- Nhập Email -->
+            <Frame 
+                Padding="0"
+                BackgroundColor="White"
+                CornerRadius="10"
+                BorderColor="#CCCCCC"
+                HeightRequest="50">
+                <HorizontalStackLayout>
+                    <Image Source="email.png" WidthRequest="24" HeightRequest="24" Margin="10,0,0,0"/>
+                    <Entry 
+                        x:Name="eEmail"
+                        Placeholder="Email"
+                        Keyboard="Email"
+                        BackgroundColor="Transparent"
+                        PlaceholderColor="#AAAAAA"
+                        TextColor="#000000"
+                        HeightRequest="50"
+                        HorizontalOptions="FillAndExpand" />
+                </HorizontalStackLayout>
+            </Frame>
 
-        <!-- Nút Register -->
-        <Button 
-            x:Name="btnRegister"
-            Text="Register"
-            Clicked="btnRegister_Clicked"
-            BackgroundColor="#415F91" 
-            TextColor="White"
-            FontSize="18"
-            FontAttributes="Bold"
-            CornerRadius="10"
-            HeightRequest="50"
-            Margin="0,20,0,0"
-            HorizontalOptions="FillAndExpand" />
+            <!-- Nhập Password -->
+            <Frame 
+                Padding="0"
+                BackgroundColor="White"
+                CornerRadius="10"
+                BorderColor="#CCCCCC"
+                HeightRequest="50">
+                <HorizontalStackLayout>
+                    <Image Source="lock.png" WidthRequest="24" HeightRequest="24" Margin="10,0,0,0"/>
+                    <Entry 
+                        x:Name="ePassword"
+                        Placeholder="Password"
+                        IsPassword="True"
+                        BackgroundColor="Transparent"
+                        PlaceholderColor="#AAAAAA"
+                        TextColor="#000000"
+                        HeightRequest="50"
+                        HorizontalOptions="FillAndExpand" />
+                </HorizontalStackLayout>
+            </Frame>
 
-        <!-- Nút Login -->
-        <Button 
-            x:Name="btnLogin"
-            Text="Login"
-            Clicked="btnLogin_Clicked"
-            BackgroundColor="Transparent"
-            TextColor="#415F91"
-            FontSize="16"
-            FontAttributes="Bold"
-            BorderColor="#415F91"
-            BorderWidth="1"
-            CornerRadius="10"
-            HeightRequest="50"
-            Margin="0,10,0,0"
-            HorizontalOptions="FillAndExpand" />
+            <!-- Nhập Confirm Password -->
+            <Frame 
+                Padding="0"
+                BackgroundColor="White"
+                CornerRadius="10"
+                BorderColor="#CCCCCC"
+                HeightRequest="50">
+                <HorizontalStackLayout>
+                    <Image Source="lock.png" WidthRequest="24" HeightRequest="24" Margin="10,0,0,0"/>
+                    <Entry 
+                        x:Name="eConfirmPassword"
+                        Placeholder="Confirm Password"
+                        IsPassword="True"
+                        BackgroundColor="Transparent"
+                        PlaceholderColor="#AAAAAA"
+                        TextColor="#000000"
+                        HeightRequest="50"
+                        HorizontalOptions="FillAndExpand" />
+                </HorizontalStackLayout>
+            </Frame>
 
-    </VerticalStackLayout>
+            <!-- Nút Register -->
+            <Button 
+                x:Name="btnRegister"
+                Text="Register"
+                Clicked="btnRegister_Clicked"
+                BackgroundColor="#415F91" 
+                TextColor="White"
+                FontSize="18"
+                FontAttributes="Bold"
+                CornerRadius="10"
+                HeightRequest="50"
+                Margin="0,20,0,0"
+                HorizontalOptions="FillAndExpand" />
+
+            <!-- Nút Login -->
+            <Button 
+                x:Name="btnLogin"
+                Text="Login"
+                Clicked="btnLogin_Clicked"
+                BackgroundColor="Transparent"
+                TextColor="#415F91"
+                FontSize="16"
+                FontAttributes="Bold"
+                BorderColor="#415F91"
+                BorderWidth="1"
+                CornerRadius="10"
+                HeightRequest="50"
+                Margin="0,10,0,0"
+                HorizontalOptions="FillAndExpand" />
+
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

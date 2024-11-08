@@ -11,51 +11,61 @@
         </LinearGradientBrush>
     </ContentPage.Background>
 
-    <ContentPage.Content>
-        <AbsoluteLayout>
-
+    <ScrollView>
+        <Grid RowDefinitions="Auto, Auto, *" ColumnDefinitions="*,*">
             <!-- Background image -->
             <Image Source="background.jpg"
+                   Grid.Row="0"
+                   Grid.ColumnSpan="2"
                    Aspect="AspectFill"
-                   AbsoluteLayout.LayoutBounds="0, 0, 1, 0.4"
-                   AbsoluteLayout.LayoutFlags="All" />
+                   HeightRequest="200"
+                   HorizontalOptions="FillAndExpand"
+                   VerticalOptions="Start" />
 
             <!-- Label Welcome overlaying the image -->
             <Label x:Name="WelcomeLabel"
-                   Text="Welcome to The New Yoga"
-                   FontSize="32"
+                   Text="Welcome to The Universal Yoga"
+                   FontSize="28"
                    FontAttributes="Bold"
                    TextColor="Black"
                    FontFamily="PacificoRegular"
-                   AbsoluteLayout.LayoutBounds="0.5, 0.075, -1, -1"
-                   AbsoluteLayout.LayoutFlags="PositionProportional" />
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   Grid.Row="0"
+                   Grid.ColumnSpan="2"
+                   Margin="0,20,0,0" />
 
             <!-- Search Bar -->
             <SearchBar Placeholder="Search courses..."
+                       Grid.Row="1"
+                       Grid.ColumnSpan="2"
                        TextChanged="OnSearchBarTextChanged"
                        BackgroundColor="#F0F0F0"
                        PlaceholderColor="#999"
                        TextColor="#333"
                        FontSize="18"
-                       Margin="20,20,20,0"
-                       HeightRequest="50"
-                       AbsoluteLayout.LayoutBounds="0.5, 0.4, 0.9, -1"
-                       AbsoluteLayout.LayoutFlags="PositionProportional, WidthProportional" />
+                       Margin="20,0"
+                       HorizontalOptions="FillAndExpand"
+                       HeightRequest="50" />
 
+            <!-- New Courses Label -->
             <Label x:Name="Available"
-             Text="New Courses"
-             FontSize="24"
-             FontAttributes="Bold"
-             TextColor="Black"
-             FontFamily="Wght"
-             AbsoluteLayout.LayoutBounds="0.1, 0.50, -1, -1"
-             AbsoluteLayout.LayoutFlags="PositionProportional" />
+                   Text="New Courses"
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   TextColor="Black"
+                   FontFamily="Wght"
+                   Grid.Row="2"
+                   Grid.Column="0"
+                   Margin="20,10,0,0"
+                   HorizontalOptions="Start" />
 
             <!-- CollectionView for displaying courses -->
-            <CollectionView ItemsSource="{Binding YogaCourses}"
+            <CollectionView Grid.Row="2"
+                            Grid.Column="0"
+                            Grid.ColumnSpan="2"
                             Margin="20,10,20,0"
-                            AbsoluteLayout.LayoutBounds="0.5, 0.85, 1, 0.4"
-                            AbsoluteLayout.LayoutFlags="All">
+                            ItemsSource="{Binding YogaCourses}">
                 <CollectionView.ItemsLayout>
                     <GridItemsLayout Orientation="Vertical"
                                      Span="2"
@@ -74,45 +84,37 @@
                                 <TapGestureRecognizer Tapped="OnFrameTapped" />
                             </Frame.GestureRecognizers>
                             <StackLayout Spacing="10">
-
                                 <!-- Course Name at the top, centered -->
                                 <Label Text="{Binding NameCourse}"
                                        FontSize="22"
                                        FontAttributes="Bold"
                                        TextColor="#333"
                                        HorizontalOptions="Center" />
-
                                 <!-- Day of the week -->
                                 <Label Text="{Binding DayOfWeek, StringFormat='Day: {0}'}"
                                        FontSize="16"
                                        TextColor="#555"
                                        HorizontalOptions="Start" />
-
                                 <!-- Time -->
                                 <Label Text="{Binding Time, StringFormat='Time: {0}'}"
                                        FontSize="16"
                                        TextColor="#555"
                                        HorizontalOptions="Start" />
-
                                 <!-- Class Type -->
                                 <Label Text="{Binding ClassType, StringFormat='Type: {0}'}"
                                        FontSize="16"
                                        TextColor="#555"
                                        HorizontalOptions="Start" />
-
                                 <!-- Price -->
                                 <Label Text="{Binding PricePerClass, StringFormat='Price: {0:C}'}"
                                        FontSize="16"
                                        TextColor="Blue"
                                        HorizontalOptions="Start" />
-
                             </StackLayout>
                         </Frame>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
-
-        </AbsoluteLayout>
-    </ContentPage.Content>
-
+        </Grid>
+    </ScrollView>
 </ContentPage>

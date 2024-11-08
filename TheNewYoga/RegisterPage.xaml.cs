@@ -45,7 +45,6 @@ namespace TheNewYoga
                 return;
             }
 
-            // Check if email already exists in "yoga_users"
             var existingUsers = await firebaseClient
                 .Child("yoga_users")
                 .OnceAsync<YogaUser>();
@@ -58,10 +57,8 @@ namespace TheNewYoga
                 return;
             }
 
-            // Hash the password before saving
             string hashedPassword = HashPassword(password);
 
-            // Create a new user object without the firebaseKey
             var user = new YogaUser
             {
                 userId = Guid.NewGuid().ToString(),
@@ -72,22 +69,18 @@ namespace TheNewYoga
                 roleAsString = "customer"
             };
 
-            // Save user to Firebase and retrieve the Firebase ID
             var firebasePush = await firebaseClient
                 .Child("yoga_users")
                 .PostAsync(user);
 
-            // Use the Firebase ID as firebaseKey and update the record
             string firebaseKey = firebasePush.Key;  // This is the Firebase-generated ID
             user.firebaseKey = firebaseKey;
 
-            // Update the Firebase entry to include firebaseKey
             await firebaseClient
                 .Child("yoga_users")
                 .Child(firebaseKey)  // Use the Firebase ID to update the same entry
                 .PutAsync(user);
 
-            // Show success alert and navigate back to the login page
             await DisplayAlert("Success", "Registration successful!", "OK");
             await Navigation.PopAsync();  // Navigate back to the login page
         }

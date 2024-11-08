@@ -21,7 +21,6 @@ namespace TheNewYoga
             // Initialize the Logout Command
             LogoutCommand = new Command(OnLogout);
 
-            // Cập nhật WelcomeLabel với email của người dùng
             if (App.CurrentUser != null)
             {
                 WelcomeMessage = $"Welcome, {App.CurrentUser.email}!";
@@ -31,19 +30,15 @@ namespace TheNewYoga
                 WelcomeMessage = "Welcome!";
             }
 
-            // Đảm bảo BindingContext được gán
             BindingContext = this;
         }
 
         private async void OnLogout()
         {
-            // Xóa dữ liệu người dùng
             Preferences.Clear();
 
-            // Hiển thị thông báo đăng xuất thành công
             await DisplayAlert("Logout", "You have been logged out successfully.", "OK");
 
-            // Điều hướng đến LoginPage
             Application.Current.MainPage = new NavigationPage(new LoginPage());
         }
     }

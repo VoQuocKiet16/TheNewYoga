@@ -68,6 +68,14 @@ namespace TheNewYoga
                 return;
             }
 
+            // Display a confirmation alert before proceeding
+            bool confirm = await DisplayAlert("Confirm Checkout", "Are you sure you want to proceed with the checkout?", "Yes", "No");
+            if (!confirm)
+            {
+                // User selected "No", so exit the method
+                return;
+            }
+
             try
             {
                 // Loop through each cart item and convert it to a HistoryItem.
@@ -109,6 +117,7 @@ namespace TheNewYoga
                 await DisplayAlert("Error", $"Checkout failed: {ex.Message}", "OK");
             }
         }
+
 
         private async void OnRemoveItemClicked(object sender, EventArgs e)
         {
